@@ -1,0 +1,114 @@
+.techSolutions {
+  padding: var(--space-4xl) 0;
+  background: var(--color-background);
+  position: relative;
+  scroll-margin-top: 80px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.headerCenter {
+  margin: 0 auto var(--space-lg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.imageWrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  position: relative;
+  background: var(--color-background-secondary);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.cardTitle {
+  font-size: var(--fs-body-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.cardDesc {
+  font-size: var(--fs-body);
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+  min-height: 54px; /* Align buttons horizontally */
+}
+
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.65rem 1.85rem;
+  background: transparent;
+  color: var(--color-text);
+  font-weight: 500;
+  border: 1.5px solid var(--color-text);
+  border-radius: 9999px;
+  font-size: var(--fs-body-sm);
+  transition: all var(--transition-base);
+}
+
+.cardBtn:hover {
+  background: var(--color-text);
+  color: var(--color-background);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .techSolutions {
+    padding: var(--space-2xl) 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .title {
+    margin-bottom: var(--space-xl);
+  }
+
+  .cardDesc {
+    min-height: auto;
+    margin-bottom: var(--space-lg);
+  }
+}

@@ -1,0 +1,83 @@
+.brands {
+  padding: var(--space-4xl) 0;
+  background: var(--color-deep-navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.brandsBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  position: relative;
+  z-index: 1;
+}
+
+.headerTitle {
+  color: white;
+}
+
+.headerSubtitle {
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.brandCard {
+  padding: var(--space-xl);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-md);
+  transition: all var(--transition-base);
+  min-height: 140px;
+}
+
+.brandCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: var(--fs-heading-md);
+  font-weight: 600;
+  color: white;
+}
+
+.brandLabel {
+  font-size: var(--fs-body-sm);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .brandCard {
+    padding: var(--space-lg);
+    min-height: 100px;
+  }
+}

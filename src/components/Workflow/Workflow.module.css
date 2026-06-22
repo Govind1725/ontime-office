@@ -1,0 +1,109 @@
+.workflow {
+  padding: var(--space-4xl) 0;
+  background: var(--color-background-secondary);
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.headerCenter {
+  margin: 0 auto var(--space-lg);
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trackLine {
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  right: 3rem;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.trackLineFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  width: 100%;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 0 var(--space-md);
+}
+
+.stepCircle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--fs-body-lg);
+}
+
+.stepLabel {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.stepDesc {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-light);
+  line-height: 1.6;
+  max-width: 160px;
+}
+
+@media (max-width: 768px) {
+  .track {
+    flex-direction: column;
+    gap: var(--space-xl);
+    align-items: flex-start;
+  }
+
+  .trackLine {
+    display: none;
+  }
+
+  .step {
+    flex-direction: row;
+    gap: var(--space-lg);
+    text-align: left;
+    padding: 0;
+  }
+
+  .stepCircle {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    font-size: var(--fs-body);
+  }
+
+  .stepDesc {
+    max-width: 100%;
+  }
+}
