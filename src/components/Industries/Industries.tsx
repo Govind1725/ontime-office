@@ -114,7 +114,6 @@ export default function Industries() {
           viewport={{ once: true, margin: '-50px' }}
         >
           {industries.map((ind) => {
-            const Icon = ind.icon;
             return (
               <motion.div
                 key={ind.title}
