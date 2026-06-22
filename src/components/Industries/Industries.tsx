@@ -1,63 +1,53 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import {
-  Building2,
-  Stethoscope,
-  GraduationCap,
-  Factory,
-  Banknote,
-  ShoppingBag,
-  Hotel,
-  Glasses,
-} from 'lucide-react';
 import styles from './Industries.module.css';
 
 const industries = [
   {
-    icon: Building2,
+    img: '/images/industries/corporate_it.png',
     title: 'Corporate & IT',
     desc: 'End-to-end office solutions for tech parks and corporate headquarters.',
     clients: '200+',
   },
   {
-    icon: Stethoscope,
+    img: '/images/industries/healthcare.png',
     title: 'Healthcare',
     desc: 'Specialized supplies for hospitals, clinics, and healthcare facilities.',
     clients: '80+',
   },
   {
-    icon: GraduationCap,
+    img: '/images/industries/education.png',
     title: 'Education',
     desc: 'Comprehensive solutions for universities, schools, and training centers.',
     clients: '60+',
   },
   {
-    icon: Factory,
+    img: '/images/industries/manufacturing.png',
     title: 'Manufacturing',
     desc: 'Industrial-grade supplies for factories and production units.',
     clients: '50+',
   },
   {
-    icon: Banknote,
+    img: '/images/industries/banking_finance.png',
     title: 'Banking & Finance',
     desc: 'Secure, compliant solutions for financial institutions and banks.',
     clients: '40+',
   },
   {
-    icon: ShoppingBag,
+    img: '/images/industries/retail.png',
     title: 'Retail',
     desc: 'Point-of-sale supplies and retail operation essentials.',
     clients: '30+',
   },
   {
-    icon: Hotel,
+    img: '/images/industries/hospitality.png',
     title: 'Hospitality',
     desc: 'Premium supplies for hotels, resorts, and hospitality chains.',
     clients: '25+',
   },
   {
-    icon: Glasses,
+    img: '/images/industries/professional_services.png',
     title: 'Professional Services',
     desc: 'Tailored solutions for law firms, consultancies, and agencies.',
     clients: '35+',
@@ -132,7 +122,12 @@ export default function Industries() {
                 variants={cardVariants}
               >
                 <div className={styles.iconWrap}>
-                  <Icon size={20} />
+                  <img
+                    src={ind.img}
+                    alt={ind.title}
+                    className={styles.cardImage}
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className={styles.cardTitle}>{ind.title}</h3>
                 <p className={styles.cardDesc}>{ind.desc}</p>
