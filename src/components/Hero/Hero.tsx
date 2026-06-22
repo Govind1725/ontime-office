@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronRight, ShieldCheck } from 'lucide-react';
+import { ChevronRight, ShieldCheck } from 'lucide-react';
 import styles from './Hero.module.css';
 
 const container = {
@@ -112,11 +112,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div className={styles.heroActions} variants={fadeUp}>
-          <a href="#contact" className={styles.heroCta}>
-            Request a Quote
-            <ArrowRight size={18} />
-          </a>
-          <a href="#solutions" className={styles.heroSecondary}>
+          <a href="#solutions" className={styles.heroCta}>
             Explore Solutions
             <ChevronRight size={18} />
           </a>
