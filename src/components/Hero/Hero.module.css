@@ -24,12 +24,12 @@
   position: absolute;
   inset: -100%;
   background-image:
-    linear-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.15) 1px, transparent 1px);
   background-size: 60px 60px;
   transform: rotate(45deg);
   pointer-events: none;
-  z-index: -1;
+  z-index: 1;
 }
 
 .heroContent {
